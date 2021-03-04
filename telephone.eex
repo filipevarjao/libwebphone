@@ -400,14 +400,14 @@
         userAgent: {
           renderTargets: ["user_agent"],
           transport: {
-            sockets: ["wss://{SIP_SERVER}:5065"],
+            sockets: ["wss://<%= base_url %>:5065"],
             recovery_max_interval: 30,
             recovery_min_interval: 2,
           },
           authentication: {
-            username: "{SIP_USERNAME}",
-            password: "{SIP_PASSWORD}",
-            realm: "{SIP_DOMAIN}",
+            username: "<%= sip_username %>",
+            password: "<%= sip_password %>",
+            realm: "<%= realm %>",
           },
           user_agent: {
             //contact_uri: '',
